@@ -1,12 +1,12 @@
 Name: xstar
-Summary: XStar by Wayne Schlitt <wayne@midwestcs.com>
+Summary: XStar by Wayne Schlitt <wayne@schlitt.net>
 Version: 2.2.0
 Release: 6
-Packager: Andreas Scherer <andreas@komputer.de>
+Packager: Andreas Scherer <https://ascherer.github.io/>
 License: Public Domain
 
 URL: http://www.schlitt.net/xstar/index.html
-Source: %{name}.tar.gz
+Source: http://www.schlitt.net/xstar/%{name}.tar.gz
 
 %if %{_vendor} == "debbuild"
 Distribution: Kubuntu 16.04 (x86_64)
