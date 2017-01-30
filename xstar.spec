@@ -3,7 +3,7 @@ Summary: XStar by Wayne Schlitt <wayne@schlitt.net>
 Version: 2.2.0
 Release: 6
 Packager: Andreas Scherer <https://ascherer.github.io/>
-License: Public Domain
+License: GPLv2+
 
 URL: http://www.schlitt.net/xstar/index.html
 Source: http://www.schlitt.net/xstar/%{name}.tar.gz
