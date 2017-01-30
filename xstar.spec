@@ -31,7 +31,7 @@ to display stuff in a regular window.
 %setup -q
 
 %build
-%{__make} -f Makefile.simple CFLAGS="-O -DNEEDS_TYPEDEFS" LDLIBS="-lm -lX11 -L/usr/X11R6/lib"
+%{__make} -f Makefile.simple CFLAGS="-O -DNEEDS_TYPEDEFS"
 
 %install
 %{__rm} -rf %{buildroot}
