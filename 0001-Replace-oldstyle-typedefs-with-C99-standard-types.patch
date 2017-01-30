@@ -1,0 +1,71 @@
+From 7758a288d8f2a92f678fe85e144f09a698c2d044 Mon Sep 17 00:00:00 2001
+From: debbuild <debbuild>
+Date: Mon, 30 Jan 2017 19:10:36 +0100
+Subject: [PATCH] Replace oldstyle typedefs with C99 standard types.
+
+I've never seen these 'POSIX types', but learned about the C99/C++ types
+and their advantages.
+---
+ Imakefile       |  4 ----
+ Makefile.simple |  4 ----
+ xstar.h         | 11 +++++------
+ 3 files changed, 5 insertions(+), 14 deletions(-)
+
+diff --git a/Imakefile b/Imakefile
+index 3fc26b6..b20250c 100644
+--- a/Imakefile
++++ b/Imakefile
+@@ -19,10 +19,6 @@ XCOMM
+ XCOMM		The default of 15 uses 64k for the hash table and
+ XCOMM		128k for points.
+ XCOMM
+-XCOMM  -DNEEDS_TYPEDEFS
+-XCOMM		define if the typedefs uint_t etc are not automatically
+-XCOMM		defined for you.  (HPUX 8.0 and 9.0 need this)
+-XCOMM
+ XCOMM  -DUSE_USLEEP
+ XCOMM		use usleep() instead of nap().  (needed for HPUX 8.0)
+ XCOMM
+diff --git a/Makefile.simple b/Makefile.simple
+index 89178d3..f02834e 100644
+--- a/Makefile.simple
++++ b/Makefile.simple
+@@ -15,10 +15,6 @@
+ #		The default of 15 uses 64k for the hash table and
+ #		128k for points.
+ #
+-#  -DNEEDS_TYPEDEFS
+-#		define if the typedefs uint_t etc are not automatically
+-#		defined for you.  (HPUX 8.0 and 9.0 need this)
+-#
+ #  -DUSE_USLEEP
+ #		use usleep() instead of nap().  (needed for HPUX 8.0)
+ #
+diff --git a/xstar.h b/xstar.h
+index 10170b2..694db65 100644
+--- a/xstar.h
++++ b/xstar.h
+@@ -23,15 +23,14 @@
+ #include <math.h>
+ #include <stdlib.h>
+ #include <unistd.h>
++#include <stdint.h>
+ 
+ 
+ /* standard POSIX typedefs */
+-#ifdef NEEDS_TYPEDEFS
+-typedef	unsigned char	uchar_t;
+-typedef	unsigned short	ushort_t;
+-typedef	unsigned int	uint_t;
+-typedef	unsigned long	ulong_t;
+-#endif
++typedef	uint8_t		uchar_t;
++typedef	uint16_t	ushort_t;
++typedef	uint32_t	uint_t;
++typedef	uint64_t	ulong_t;
+ 
+ 
+ 
+-- 
+2.11.0
+

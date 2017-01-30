@@ -7,6 +7,7 @@ License: Public Domain
 
 URL: http://www.schlitt.net/xstar/index.html
 Source: http://www.schlitt.net/xstar/%{name}.tar.gz
+Patch: 0001-Replace-oldstyle-typedefs-with-C99-standard-types.patch
 
 %if %{_vendor} == "debbuild"
 Distribution: Kubuntu 16.04 (x86_64)
@@ -31,7 +32,7 @@ to display stuff in a regular window.
 %autosetup
 
 %build
-%{__make} -f Makefile.simple CFLAGS="-O -DNEEDS_TYPEDEFS"
+%{__make} -f Makefile.simple
 
 %install
 %{__rm} -rf %{buildroot}
