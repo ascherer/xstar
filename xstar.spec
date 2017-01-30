@@ -28,7 +28,7 @@ XStar can be used to animate the root window, as a screen saver or just
 to display stuff in a regular window.
 
 %prep
-%setup -q
+%autosetup
 
 %build
 %{__make} -f Makefile.simple CFLAGS="-O -DNEEDS_TYPEDEFS"
