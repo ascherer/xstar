@@ -35,6 +35,7 @@ to display stuff in a regular window.
 %{__make} -f Makefile.simple
 
 %install
+%{__rm} -rf %{buildroot}
 %{__install} xstar -D -t %{buildroot}%{_bindir}
 %{__install} n-body.ps theory_of_op.ltr -D -t %{buildroot}/%{_docdir}/%{name}
 %{__install} xstar.1 -D -t %{buildroot}/%{_mandir}/man1
