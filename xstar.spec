@@ -57,7 +57,7 @@ to display stuff in a regular window.
 - dpkg complains about missing maintainer
 * Wed Jan 19 2011 Andreas Scherer <andreas_tex@freenet.de> 2.2.0-3
 - Rebuild for KUbuntu
-* Thu Oct 31 2005 Andreas Scherer <andreas_tug@freenet.de> 2.2.0-2
+* Mon Oct 31 2005 Andreas Scherer <andreas_tug@freenet.de> 2.2.0-2
 - Not-quite-local installation
-* Thu Oct 31 2005 Andreas Scherer <andreas_tug@freenet.de> 2.2.0-1
+* Mon Oct 31 2005 Andreas Scherer <andreas_tug@freenet.de> 2.2.0-1
 - Initial build
