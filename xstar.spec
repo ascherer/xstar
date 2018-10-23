@@ -36,9 +36,12 @@ to display stuff in a regular window.
 
 %install
 %{__rm} -rf %{buildroot}
-%{__install} xstar -D -t %{buildroot}%{_bindir}
-%{__install} n-body.ps theory_of_op.ltr -m 644 -D -t %{buildroot}/%{_docdir}/%{name}
-%{__install} xstar.1 -m 644 -D -t %{buildroot}/%{_mandir}/man1
+%{__install} -d %{buildroot}%{_bindir}
+%{__install} xstar %{buildroot}%{_bindir}
+%{__install} -d %{buildroot}/%{_docdir}/%{name}
+%{__install} -pm 664 n-body.ps theory_of_op.ltr %{buildroot}/%{_docdir}/%{name}
+%{__install} -d %{buildroot}/%{_mandir}/man1
+%{__install} -m 644 xstar.1 %{buildroot}/%{_mandir}/man1
 
 %files
 %defattr(-,root,root,-)
