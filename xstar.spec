@@ -36,11 +36,11 @@ to display stuff in a regular window.
 
 %install
 %{__rm} -rf %{buildroot}
-%{__install} -d %{buildroot}%{_bindir}
+%{__install} -d %{buildroot}%{_bindir} \
+	%{buildroot}/%{_docdir}/%{name} \
+	%{buildroot}/%{_mandir}/man1
 %{__install} xstar %{buildroot}%{_bindir}
-%{__install} -d %{buildroot}/%{_docdir}/%{name}
 %{__install} -pm 664 n-body.ps theory_of_op.ltr %{buildroot}/%{_docdir}/%{name}
-%{__install} -d %{buildroot}/%{_mandir}/man1
 %{__install} -m 644 xstar.1 %{buildroot}/%{_mandir}/man1
 
 %files
