@@ -10,7 +10,7 @@ Source: http://www.schlitt.net/xstar/%{name}.tar.gz
 Patch: 0001-Replace-oldstyle-typedefs-with-C99-standard-types.patch
 
 %if %{_vendor} == "debbuild"
-Distribution: Kubuntu 16.04 (x86_64)
+Distribution: Kubuntu 18.04 (x86_64)
 Group: science
 %else
 Distribution: openSUSE 42 (x86_64)
